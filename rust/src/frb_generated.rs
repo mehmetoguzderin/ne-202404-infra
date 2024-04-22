@@ -31,7 +31,7 @@ flutter_rust_bridge::frb_generated_boilerplate!(
     default_rust_auto_opaque = RustAutoOpaqueMoi,
 );
 pub(crate) const FLUTTER_RUST_BRIDGE_CODEGEN_VERSION: &str = "2.0.0-dev.32";
-pub(crate) const FLUTTER_RUST_BRIDGE_CODEGEN_CONTENT_HASH: i32 = -1261262334;
+pub(crate) const FLUTTER_RUST_BRIDGE_CODEGEN_CONTENT_HASH: i32 = -126668754;
 
 // Section: executor
 
@@ -63,7 +63,7 @@ fn wire_greet_impl(
             let api_name = <String>::sse_decode(&mut deserializer);
             deserializer.end();
             transform_result_sse((move || {
-                Result::<_, ()>::Ok(crate::api::simple::greet(api_name))
+                Result::<_, ()>::Ok(crate::api::sigturk_sakha_transliterator::greet(api_name))
             })())
         },
     )
@@ -92,9 +92,9 @@ fn wire_init_app_impl(
                 flutter_rust_bridge::for_generated::SseDeserializer::new(message);
             deserializer.end();
             move |context| {
-                transform_result_sse(
-                    (move || Result::<_, ()>::Ok(crate::api::simple::init_app()))(),
-                )
+                transform_result_sse((move || {
+                    Result::<_, ()>::Ok(crate::api::sigturk_sakha_transliterator::init_app())
+                })())
             }
         },
     )
@@ -104,31 +104,13 @@ fn wire_transliterate_sakha_cyrillic_to_sakha_latin_impl(
     rust_vec_len_: i32,
     data_len_: i32,
 ) -> flutter_rust_bridge::for_generated::WireSyncRust2DartSse {
-    FLUTTER_RUST_BRIDGE_HANDLER.wrap_sync::<flutter_rust_bridge::for_generated::SseCodec, _>(
-        flutter_rust_bridge::for_generated::TaskInfo {
-            debug_name: "transliterate_sakha_cyrillic_to_sakha_latin",
-            port: None,
-            mode: flutter_rust_bridge::for_generated::FfiCallMode::Sync,
-        },
-        move || {
-            let message = unsafe {
-                flutter_rust_bridge::for_generated::Dart2RustMessageSse::from_wire(
-                    ptr_,
-                    rust_vec_len_,
-                    data_len_,
-                )
-            };
-            let mut deserializer =
-                flutter_rust_bridge::for_generated::SseDeserializer::new(message);
-            let api_text = <String>::sse_decode(&mut deserializer);
-            deserializer.end();
-            transform_result_sse((move || {
-                Result::<_, ()>::Ok(
-                    crate::api::simple::transliterate_sakha_cyrillic_to_sakha_latin(api_text),
-                )
-            })())
-        },
-    )
+    FLUTTER_RUST_BRIDGE_HANDLER.wrap_sync::<flutter_rust_bridge::for_generated::SseCodec,_>(flutter_rust_bridge::for_generated::TaskInfo{ debug_name: "transliterate_sakha_cyrillic_to_sakha_latin", port: None, mode: flutter_rust_bridge::for_generated::FfiCallMode::Sync }, move || { 
+            let message = unsafe { flutter_rust_bridge::for_generated::Dart2RustMessageSse::from_wire(ptr_, rust_vec_len_, data_len_) };
+            let mut deserializer = flutter_rust_bridge::for_generated::SseDeserializer::new(message);
+            let api_text = <String>::sse_decode(&mut deserializer);deserializer.end();
+                transform_result_sse((move || {
+                     Result::<_,()>::Ok(crate::api::sigturk_sakha_transliterator::transliterate_sakha_cyrillic_to_sakha_latin(api_text))
+                })()) })
 }
 
 // Section: dart2rust

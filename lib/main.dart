@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:sigturk_sakha_transliterator_app/src/rust/api/simple.dart';
+import 'package:sigturk_sakha_transliterator_app/src/rust/api/sigturk_sakha_transliterator.dart';
 import 'package:sigturk_sakha_transliterator_app/src/rust/frb_generated.dart';
 
 Future<void> main() async {
