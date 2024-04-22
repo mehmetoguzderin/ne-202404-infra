@@ -1,0 +1,85 @@
+# SIGTURK Sakha Transliterator
+
+:toc:
+
+.Supported Transliteration Matrix
+[]
+|===
+| | From Latin | From Cyrillic | From Old Turkic
+
+| To Latin | In Progress | Supported | In Progress
+| To Cyrillic | In Progress | In Progress | In Progress
+| To Old Turkic | In Progress | In Progress | In Progress
+|===
+
+.Supported Bindings
+[]
+|===
+| Language | Status
+
+| C | In Progress
+| C++ | In Progress
+| Dart | Supported
+| Node | Supported
+| Python | Supported
+| Rust | Supported
+| Web | Supported
+|===
+
+## Prerequisites
+
+* Conda
+* Flutter
+* Node
+* Rust
+
+## Setup
+
+....
+conda env create --prefix ./.conda -f environment.yml
+conda activate ./.conda
+....
+
+## Running
+
+### Flutter
+
+....
+flutter_rust_bridge_codegen generate
+flutter_rust_bridge_codegen build-web
+flutter build web --web-renderer html --base-href /preview/202403/
+flutter run -d chrome --web-renderer html --web-header=Cross-Origin-Opener-Policy=same-origin --web-header=Cross-Origin-Embedder-Policy=require-corp
+....
+
+### Node
+
+....
+cd node
+npm install
+node
+....
+
+
+### Python
+
+....
+conda activate ./.conda
+cd python
+maturin develop
+python
+....
+
+## TODO
+
+* Create CI
+* Create CI for Previews
+* Publish Packages
+* Write Tests
+* Increase Matrix Coverage
+* Increase Language Coverage
+
+## Acknowledgements
+
+* This project is supported by the link:sigturk.com[SIGTURK] community.
+* Original transliteration data is from [https://github.com/varie/sakha-transliterator
+* Original transliteration data is from link:https://github.com/varie/sakha-transliterator[Sardana Ivanova].

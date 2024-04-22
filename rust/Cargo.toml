@@ -1,0 +1,12 @@
+[package]
+name = "sigturk_sakha_transliterator"
+version = "0.1.0"
+edition = "2021"
+exclude = ["index.node"]
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+flutter_rust_bridge = "=2.0.0-dev.32"
+lazy_static = "1.4.0"
