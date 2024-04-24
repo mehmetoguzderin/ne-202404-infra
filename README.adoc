@@ -47,7 +47,7 @@ conda activate ./.conda
 ....
 flutter_rust_bridge_codegen generate
 flutter_rust_bridge_codegen build-web
-flutter build web --web-renderer html --base-href /preview/202403/
+flutter build web --web-renderer html --base-href /
 flutter run -d chrome --web-renderer html --web-header=Cross-Origin-Opener-Policy=same-origin --web-header=Cross-Origin-Embedder-Policy=require-corp
 ....
 
@@ -81,5 +81,4 @@ python
 ## Acknowledgements
 
 * This project is supported by the link:sigturk.com[SIGTURK] community.
-* Original transliteration data is from [https://github.com/varie/sakha-transliterator
 * Original transliteration data is from link:https://github.com/varie/sakha-transliterator[Sardana Ivanova].

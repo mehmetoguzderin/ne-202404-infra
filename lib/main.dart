@@ -62,6 +62,15 @@ class _TransliteratorScreenState extends State<TransliteratorScreen> {
     }
   }
 
+  void _clearText() {
+    _controller.clear();
+    setState(() {
+      _transliteratedText = "";
+      _inputLength = 0;
+      _outputLength = 0;
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -102,6 +111,11 @@ class _TransliteratorScreenState extends State<TransliteratorScreen> {
                 ElevatedButton(
                   onPressed: _pasteFromClipboard,
                   child: const Text('Paste'),
+                ),
+                const SizedBox(width: 8), // Add some spacing between buttons
+                ElevatedButton(
+                  onPressed: _clearText,
+                  child: const Text('Clear'),
                 ),
               ],
             ),

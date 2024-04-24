@@ -119,7 +119,7 @@ pub fn init_app() {
 #[cfg(feature = "node_bindings")]
 mod node_bindings {
     use neon::prelude::*;
-    
+
     fn hello(mut cx: FunctionContext) -> JsResult<JsString> {
         Ok(cx.string("hello node"))
     }
