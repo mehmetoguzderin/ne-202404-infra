@@ -1,5 +1,3 @@
-# SIGTURK Sakha Transliterator
-
 :toc:
 
 .Supported Transliteration Matrix
@@ -77,8 +75,3 @@ python
 * Write Tests
 * Increase Matrix Coverage
 * Increase Language Coverage
-
-## Acknowledgements
-
-* This project is supported by the link:sigturk.com[SIGTURK] community.
-* Original transliteration data is from link:https://github.com/varie/sakha-transliterator[Sardana Ivanova].
